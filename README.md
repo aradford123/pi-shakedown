@@ -1,5 +1,6 @@
 # PI Car Shakedown script
 
+A shakedown script for the SE PI car project
 ## To install
 
 first clone the repository

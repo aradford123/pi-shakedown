@@ -1,0 +1,5 @@
+AUTH="CHANGE ME"
+
+# pi room
+ROOMID="CHANGE ME"
+

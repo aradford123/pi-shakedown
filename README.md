@@ -1,6 +1,13 @@
 # PI Car Shakedown script
 
-A shakedown script for the SE PI car project
+A shakedown script for the SE PI car project.
+
+Will run some car operations, and post a video and some pictures to a webex teams space.
+
+Please make sure the car can move forword for 2 seconds without crashing.
+
+It will also take an image at 45 degress to the Left hand side of the car
+
 ## To install
 
 first clone the repository

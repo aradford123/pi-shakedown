@@ -90,6 +90,7 @@ def main(dopost):
             break
         except OSError:
             print("Stop attempt #{} failed, retrying".format(i))
+            time.sleep(.2)
 
     if dopost:
         api.messages.create(ROOMID, text="serial: {} video - mp4".format(serial),

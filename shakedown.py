@@ -35,14 +35,22 @@ def take_photo(message):
         camera.capture('img.jpg')
 
 def take_video():
+    raw_video = "car_video.h264"
+    processed_video = "car_video.mp4"
+    # get rid of existing video
+    try:
+         os.remove(processed_video)
+    except OSError:
+        pass
+
     with picamera.PiCamera() as camera:
         camera.resolution = (640, 480)
-        camera.start_recording('car_video.h264')
+        camera.start_recording(raw_video)
         camera.wait_recording(1)
         camera.stop_recording()
 
     # convert to mp4
-    command = "MP4Box -add car_video.h264 car_video.mp4"
+    command = "MP4Box -add {} {}".format(raw_video,processed_video)
     try:
         output = subprocess.check_output(command, stderr=subprocess.STDOUT, shell=True)
     except subprocess.CalledProcessError as e:
